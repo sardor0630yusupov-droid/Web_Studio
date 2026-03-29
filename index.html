@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        /* Animated Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: linear-gradient(90deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2));
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        /* Navbar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <nav class="navbar">
+        <a href="#" style="color: white; text-decoration: none;">Home</a>
+        <a href="#services" style="color: white; text-decoration: none;">Services</a>
+        <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to Our Professional Services</h1>
+        <p>Your success is our priority. Explore our services below!</p>
+    </div>
+    <div class="services" id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Graphic Design</li>
+            <li>Digital Marketing</li>
+        </ul>
+    </div>
+    <div class="footer" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </div>
+</body>
+</html>
