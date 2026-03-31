@@ -1,0 +1,21 @@
+{
+  "name": "web-studio-site",
+  "version": "1.0.0",
+  "description": "🌐 **Web Studio** - Tashkent shahrida eng sifatli veb-saytlar va ilovalar ishlab chiquvchi kompaniya.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sardor0630yusupov-droid/web-studio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sardor0630yusupov-droid/web-studio/issues"
+  },
+  "homepage": "https://github.com/sardor0630yusupov-droid/web-studio#readme"
+}

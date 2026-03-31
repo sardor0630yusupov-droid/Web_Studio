@@ -1,76 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Homepage</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-        /* Animated Background */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            background: linear-gradient(90deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2));
-            animation: backgroundAnimation 10s infinite alternate;
-        }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
-        /* Navbar */
-        .navbar {
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-        }
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .footer {
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Web Studio - Professional Web Design</title>
+    <link rel="stylesheet" href="style.css">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Studio - Professional veb-sayt dizayni va development. Tashkent'da eng sifatli web xizmatlar.">
+    <meta name="keywords" content="veb-sayt, web design, development, Tashkent, professional">
+    <meta name="author" content="Web Studio">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (Social Media) -->
+    <meta property="og:title" content="Web Studio - Professional Web Design">
+    <meta property="og:description" content="Veb-sayt dizayni va development xizmatları">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://webstudio1.com">
+    
+    <title>Web Studio - Professional Veb-sayt Dizayni | Tashkent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 </head>
 <body>
-    <div class="background"></div>
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="#" style="color: white; text-decoration: none;">Home</a>
-        <a href="#services" style="color: white; text-decoration: none;">Services</a>
-        <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+        <div class="container">
+            <div class="logo"><div class="logo" style="display: flex; align-items: center; gap: 10px;">
+    <img src="logo bot.png" alt="Web Studio" style="height: 50px; width: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #667eea;">
+    <span>Web Studio</span>
+</div></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Bosh sahifa</a></li>
+                <li><a href="services.html">Xizmatlar</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </div>
     </nav>
-    <div class="hero">
-        <h1>Welcome to Our Professional Services</h1>
-        <p>Your success is our priority. Explore our services below!</p>
-    </div>
-    <div class="services" id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>Graphic Design</li>
-            <li>Digital Marketing</li>
-        </ul>
-    </div>
-    <div class="footer" id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Web Studio</h1>
+            <p>Professional Veb-sayt Tahlili va Dizayni</p>
+            <a href="contact.html" class="btn">📞 Buyurtma Berish</a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="container">
+            <h2>🌟 Nega Bizni Tanlang?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>💻 Professional Dizayn</h3>
+                    <p>Eng so'ngi texnologiyalar va trends bilan ishlaydi. Sizning brendingiz uchun noyob dizayn.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Tezkor Performance</h3>
+                    <p>Saytlar 2 soniyada yuklanadi. SEO uchun optimal.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Telefon, planshet, kompyuter - hammasida yaxshi ko'rinadi.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Xavfsizlik</h3>
+                    <p>SSL sertifikati va eng yangi xavfsizlik standartlari.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯 SEO Optimized</h3>
+                    <p>Google'da birinchi sahifada chiqish uchun tayyorlangan.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🤝 24/7 Support</h3>
+                    <p>Har qanday muammoni tez hal qilamiz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div>
+                    <h3 style="font-size: 2.5rem;">500+</h3>
+                    <p>Yakunlangan Loyihalar</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 2.5rem;">200+</h3>
+                    <p>Xursand Mijozlar</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 2.5rem;">10+</h3>
+                    <p>Yillik Tajriba</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 2.5rem;">4.9⭐</h3>
+                    <p>Google Reytingi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="features">
+        <div class="container" style="text-align: center;">
+            <h2>Tayyor-misiz?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #666;">Bugundan boshlang - FREE konsultatsiya!</p>
+            <a href="contact.html" class="btn">Biz bilan Bog'lanish</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Web Studio. Barcha huquqlar himoyalangan. | <a href="#" style="color: #667eea; text-decoration: none;">Maxfiylik Siyosati</a></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
