@@ -130,3 +130,21 @@ label {
   text-decoration: none;
   font-weight: 600;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* qora fon */
+  height: 100vh;
+
+  display: flex;
+  justify-content: center; /* gorizontal markaz */
+  align-items: center;     /* vertikal markaz */
+}
+
+/* Login container */
+.form {
+  background: #111;
+  padding: 30px;
+  border-radius: 20px;
+}
