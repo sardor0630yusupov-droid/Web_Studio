@@ -149,6 +149,11 @@ body {
 /* BU HAM MUHIM */
 .form {
   position: relative;
+  .form {
+  position: relative;
+  width: 350px;
+  margin: 0 auto;
+}
 }
 
 /* Login container */
