@@ -133,23 +133,27 @@ label {
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
   background: #000;
+}
+
+/* MARKAZGA QO'YADI */
+.center {
+  width: 100%;
+  height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* BU MUHIM */
+/* BU HAM MUHIM */
 .form {
   position: relative;
-  margin: 0 auto; /* ortaga majbur qiladi */
 }
 
 /* Login container */
 .form {
-  background: rgb(20, 0, 54, 0.25);
+  background: rgb(14, 0, 39)025;
   padding: 30px;
   border-radius: 20px;
 }
