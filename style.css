@@ -149,16 +149,9 @@ body {
 /* BU HAM MUHIM */
 .form {
   position: relative;
-  .form {
-  position: relative;
   width: 350px;
   margin: 0 auto;
-}
-}
-
-/* Login container */
-.form {
-  background: rgb(14, 0, 39)025;
+  background: rgba(14, 0, 39, 0.25);
   padding: 30px;
   border-radius: 20px;
 }
