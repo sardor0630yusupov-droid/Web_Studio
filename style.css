@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   background: #000;
-  color: #fff;
+  color: #000000;
 }
 
 /* Navbar */
@@ -31,7 +31,7 @@ nav a, nav button {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.9);
+  background: rgba(23, 1, 1, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +64,7 @@ nav a, nav button {
 body {
   margin: 0;
   font-family: sans-serif;
-  color: #fff;
+  color: #000000;
 
   background: url("backgorund.png");
   background-size: cover;
