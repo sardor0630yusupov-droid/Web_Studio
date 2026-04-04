@@ -23,23 +23,6 @@ nav a, nav button {
   cursor: pointer;
 }
 
-/* Slider */
-.swiper {
-  width: 100%;
-  height: 100vh;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-}
-
-/* Backgrounds */
-.slide1 { background: linear-gradient(black, #111); }
-.slide2 { background: linear-gradient(black, #222); }
-.slide3 { background: linear-gradient(black, #333); }
 
 /* Login */
 .login-box {
@@ -77,4 +60,14 @@ nav a, nav button {
   cursor: pointer;
   display: block;
   margin-top: 10px;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #fff;
+
+  background: url("backgorund.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
