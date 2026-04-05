@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>WebStudios</title>
-
-<link rel="stylesheet" href="style.css">
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Studios</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Background -->
-<div class="bg"></div>
-
-<!-- Login -->
-<div class="login-container">
-  <div class="login-card">
-    <h2>WebStudios</h2>
-
-    <div class="input-box">
-      <input type="text" required>
-      <label>Login</label>
-    </div>
-
-    <div class="input-box">
-      <input type="password" required>
-      <label>Password</label>
-    </div>
-
-    <button class="login-btn">Kirish</button>
-  </div>
+<!-- Splash Screen -->
+<div id="splash">
+    <h1>Assalomu alaykum 👋<br>WebStudios ga hush kelibsiz</h1>
 </div>
 
-<!-- Dashboard -->
-<div class="dashboard hidden">
-  <h1>Welcome to WebStudios</h1>
+<!-- Main Content -->
+<div id="main" class="hidden">
 
-  <div class="cards">
-    <div class="card">Web Site</div>
-    <div class="card">Telegram Bot</div>
-    <div class="card">Design</div>
-  </div>
+<header>
+    <h2>WebStudios</h2>
+    <nav>
+        <a href="#about">Biz haqimizda</a>
+        <a href="#services">Xizmatlar</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Zamonaviy IT Yechimlar</h1>
+    <p>Telegram botlar va Web saytlar yaratamiz 🚀</p>
+</section>
+
+<section id="about" class="section">
+    <h2>Biz haqimizda</h2>
+    <p>Biz professional IT jamoamiz. Zamonaviy texnologiyalar orqali biznesingizni rivojlantiramiz.</p>
+</section>
+
+<section id="services" class="section">
+    <h2>Xizmatlar</h2>
+    <div class="cards">
+        <div class="card">Telegram Bot</div>
+        <div class="card">Web Sayt</div>
+        <div class="card">UI/UX Dizayn</div>
+    </div>
+</section>
+
+<section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <div class="cards">
+        <div class="card">Bot loyiha</div>
+        <div class="card">Website loyiha</div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Kontakt</h2>
+    <a href="https://t.me/yourusername" class="btn">Telegramga yozish</a>
+</section>
+
 </div>
 
 <script src="script.js"></script>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
