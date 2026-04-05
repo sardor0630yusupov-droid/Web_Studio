@@ -1,38 +1,17 @@
-// Animation
-gsap.from(".login-card", {
-  y: 100,
-  opacity: 0,
-  duration: 1
+document.addEventListener("DOMContentLoaded", () => {
+    const splash = document.getElementById("splash");
+    const main = document.getElementById("main");
+
+    setTimeout(() => {
+        splash.style.opacity = "0";
+        splash.style.transition = "0.8s";
+
+        setTimeout(() => {
+            splash.style.display = "none";
+            if (main) {
+                main.classList.remove("hidden");
+            }
+        }, 800);
+
+    }, 3000);
 });
-
-// Login
-document.querySelector(".login-btn").onclick = () => {
-  document.querySelector(".login-container").style.display = "none";
-  document.querySelector(".dashboard").classList.remove("hidden");
-
-  gsap.from(".card", {
-    scale: 0,
-    duration: 0.5,
-    stagger: 0.2
-  });
-};
-// Telegram WebApp
-let tg = window.Telegram.WebApp;
-tg.expand();
-
-// User data
-let user = tg.initDataUnsafe.user;
-
-if (user) {
-  document.querySelector(".login-container").style.display = "none";
-  document.querySelector(".dashboard").classList.remove("hidden");
-
-  document.querySelector(".dashboard h1").innerText =
-    "Welcome " + user.first_name;
-
-  gsap.from(".card", {
-    scale: 0,
-    duration: 0.5,
-    stagger: 0.2
-  });
-}
