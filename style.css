@@ -44,12 +44,12 @@ header {
 nav a {
     margin: 10px;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: cyan;
+    color: #000000;
 }
 
 /* Sections */
