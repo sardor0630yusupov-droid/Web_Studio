@@ -45,7 +45,7 @@ body {
 }
 
 .nav-links a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 500;
@@ -57,7 +57,7 @@ body {
 
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, #000000 0%, #000000 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #000000 100%);
     color: white;
     padding: 150px 0;
     text-align: center;
