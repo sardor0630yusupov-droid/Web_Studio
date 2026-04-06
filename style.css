@@ -18,7 +18,7 @@ body {
 
 /* NAVBAR */
 .navbar {
-    background: #ffffff;
+    background: #1a1a2e;
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 .logo {
-    color: #000000;
+    color: #667eea;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -52,12 +52,12 @@ body {
 }
 
 .nav-links a:hover {
-    color: #000000;
+    color: #667eea;
 }
 
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, #000000 0%, #000000 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 150px 0;
     text-align: center;
@@ -82,11 +82,11 @@ body {
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    background: #000000;
+    background: #667eea;
     color: white;
     text-decoration: none;
     border-radius: 50px;
-    border: 2px solid #000000;
+    border: 2px solid #667eea;
     transition: all 0.3s ease;
     cursor: pointer;
     font-size: 1rem;
@@ -129,7 +129,7 @@ body {
 }
 
 .feature-card h3 {
-    color: #000000;
+    color: #667eea;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -150,7 +150,7 @@ body {
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
@@ -161,7 +161,7 @@ body {
 .portfolio-img {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, #000000 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -253,118 +253,4 @@ footer {
 
 .logo img:hover {
     transform: scale(1.1);
-}
-.social-icons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-/* umumiy icon style */
-.icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 26px;
-  color: white;
-  position: relative;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-/* glow animation */
-.icon::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: inherit;
-  filter: blur(15px);
-  opacity: 0.6;
-  z-index: -1;
-  transition: 0.3s;
-}
-
-/* hover effect */
-.icon:hover {
-  transform: scale(1.15);
-}
-
-/* pulse animatsiya */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-.icon:hover::before {
-  animation: pulse 1s infinite;
-}
-
-/* ranglar */
-.contact-social {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 26px;
-  color: white;
-  position: relative;
-  transition: 0.3s;
-}
-
-/* ICONNI MAJBURIY KO‘RINISHI */
-.icon i {
-  display: block;
-}
-
-/* glow */
-.icon::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: inherit;
-  filter: blur(15px);
-  opacity: 0.7;
-  z-index: -1;
-}
-
-/* hover */
-.icon:hover {
-  transform: scale(1.15);
-}
-
-/* ranglar */
-.instagram {
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-}
-
-.telegram {
-  background: #0088cc;
-}
-
-.facebook {
-  background: #1877f2;
-}
-body {
-  background: #0e1621;
-  color: white;
-  font-family: sans-serif;
 }
