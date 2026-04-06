@@ -308,6 +308,50 @@ footer {
 }
 
 /* ranglar */
+.contact-social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* ICONNI MAJBURIY KO‘RINISHI */
+.icon i {
+  display: block;
+}
+
+/* glow */
+.icon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  filter: blur(15px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+/* hover */
+.icon:hover {
+  transform: scale(1.15);
+}
+
+/* ranglar */
 .instagram {
   background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
 }
