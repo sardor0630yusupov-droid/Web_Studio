@@ -1,6 +1,6 @@
 # Web Studio - Professional Web Design & Development
 
-🌐 **Web Studio** - Tashkent shahrida eng sifatli veb-saytlar va ilovalar ishlab chiquvchi kompaniya.
+🌐 **Web Studios** - Tortkul shahrida eng sifatli veb-saytlar va ilovalar ishlab chiquvchi kompaniya.
 
 ## 📋 Loyiha Haqida
 

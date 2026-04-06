@@ -18,7 +18,7 @@ app.post('/send-telegram', async (req, res) => {
         
         const text = `📨 YANGI ZAKAZ!\n\n👤 Ism: ${name}\n📧 Email: ${email}\n📞 Telefon: ${phone}\n\n💬 Xabar:\n${message}`;
         
-        const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+        const url = `https://api.telegram.org/bot${8296204957}/sendMessage`;
         
         const response = await axios.post(url, {
             chat_id: CHAT_ID,
@@ -34,5 +34,5 @@ app.post('/send-telegram', async (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log('Server 3000 portida ishlamoqda: http://localhost:3000');
+    console.log('Server 3000 portida ishlamoqda: http://webstudio.site:3000');
 });
