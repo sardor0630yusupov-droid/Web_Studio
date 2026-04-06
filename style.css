@@ -79,19 +79,6 @@ body {
 }
 
 /* BUTTON */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #000000;
-    color: rgb(255, 15, 15);
-    text-decoration: none;
-    border-radius: 50px;
-    border: 2px solid #ffffff;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 1rem;
-    
-}
 #orderBtn {
     padding: 15px 40px;
     font-size: 20px;
@@ -131,6 +118,7 @@ body {
     50% { filter: blur(20px) hue-rotate(180deg); }
     100% { filter: blur(15px) hue-rotate(360deg); }
 }
+
 
 .btn:hover {
     background: white;
