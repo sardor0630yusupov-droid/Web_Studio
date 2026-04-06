@@ -236,64 +236,38 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* WRAPPER */
+.logo-wrapper {
+    width: 50px;
+    height: 50px;
+    position: relative;
 }
 
-.logo img {
-    height: 50px;
-    width: 50px;
+/* IMAGE */
+.logo-wrapper img {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #667eea;
-    transition: transform 0.3s ease;
+    transition: 0.3s;
 }
 
-.logo img:hover {
-    transform: scale(1.1);
-}
-.social-icons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-/* umumiy icon style */
-.icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 26px;
-  color: white;
-  position: relative;
-  transition: 0.3s ease;
-  cursor: pointer;
+/* GLOW */
+.logo-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #667eea;
+    filter: blur(15px);
+    opacity: 0.7;
+    z-index: -1;
 }
 
-/* glow animation */
-.icon::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: inherit;
-  filter: blur(15px);
-  opacity: 0.6;
-  z-index: -1;
-  transition: 0.3s;
-}
-
-/* hover effect */
-.icon:hover {
-  transform: scale(1.15);
+/* HOVER */
+.logo-wrapper:hover img {
+    transform: scale(1.15);
 }
 
 /* pulse animatsiya */
