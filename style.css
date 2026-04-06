@@ -129,48 +129,47 @@ body {
 }
 
 /* FEATURES */
-.features-btn {
-    display: inline-block;
-    padding: 10px 25px;
-    background: #111111; /* features uchun ozroq ochiq qora */
-    color: #00ccff; /* skromno kok rang yozuv */
-    text-decoration: none;
-    border-radius: 25px;
-    border: 1px solid #555555;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    transition: transform 0.3s ease, color 0.3s ease;
+.features {
+    padding: 60px 0;
+    background: #f8f9fa;
 }
 
-/* Subtle glow effekti */
-.features-btn::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(45deg, #00ccff, #00ffff); /* pastel gradient */
-    border-radius: 28px;
-    filter: blur(8px); /* juda kuchli emas, skromno */
-    opacity: 0.4;
-    z-index: -1;
-    animation: subtleGlow 3s ease-in-out infinite alternate;
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
-.features-btn:hover {
-    transform: scale(1.05);
-    color: #00ffff; /* hoverda biroz yorqinroq */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
-@keyframes subtleGlow {
-    0% { filter: blur(6px) hue-rotate(0deg); opacity: 0.3; }
-    50% { filter: blur(10px) hue-rotate(90deg); opacity: 0.45; }
-    100% { filter: blur(8px) hue-rotate(180deg); opacity: 0.35; }
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.8;
+}
+
 /* PORTFOLIO */
 .portfolio-grid {
     display: grid;
