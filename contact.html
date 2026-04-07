@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Web Studios</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="description" content="Web Studio bilan bog'lanish - Tashkent. +998 90 123-45-67, info@webstudio.uz">
+<title>Kontakt - Web Studio | Biz bilan Bog'lanish</title>
+    <title>Kontakt - Web Studio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Web Studios</div>
+            <div class="logo">Web Studio</div>
             <ul class="nav-links">
                 <li><a href="index.html">Bosh sahifa</a></li>
                 <li><a href="services.html">Xizmatlar</a></li>
@@ -27,78 +28,40 @@
         </div>
     </section>
 
-    <section class="features">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;">
-                <!-- Contact Form -->
-                <div>
-                    <h2>Forma orqali xabar yuboring</h2>
-                    <form class="form-container" onsubmit="validateForm(event)">
-                        <div class="form-group">
-                            <label for="name">Ism-Familya:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefon:</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Xabar:</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                      <!-- From Uiverse.io by dpaulos6 --> 
-<button class="c-button c-button--gooey">
-  Jo'natish
-  <div class="c-button__blobs">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</button>
-<svg
-  style="display: block; height: 0; width: 0;"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <defs>
-    <filter id="goo">
-      <feGaussianBlur
-        result="blur"
-        stdDeviation="10"
-        in="SourceGraphic"
-      ></feGaussianBlur>
-      <feColorMatrix
-        result="goo"
-        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
-        mode="matrix"
-        in="blur"
-      ></feColorMatrix>
-      <feBlend in2="goo" in="SourceGraphic"></feBlend>
-    </filter>
-  </defs>
-</svg>
-
-                    </form>
-                </div>
+<form class="form-container" onsubmit="sendToTelegram(event)">
+    <div class="form-group">
+        <label for="name">Ism-Familya:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Telefon:</label>
+        <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Xabar:</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Jo'natish</button>
+</form>>
 
                 <!-- Contact Info -->
                 <div>
                     <h2>Bizning Ma'lumotlar</h2>
                     <div class="feature-card" style="margin-top: 1rem;">
                         <h3>📧 Email</h3>
-                        <p><a href="mailto:info@webstudios0111@gmail.com" style="color: #667eea; text-decoration: none;">info@webstudios0111@gmail.com </a></p>
+                        <p><a href="mailto:info@webstudios0111@gmail.com" style="color: #667eea; text-decoration: none;">info@webstudios0111@gmail.com</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>📞 Telefon</h3>
-                        <p><a href="tel:+998992722376" style="color: #667eea; text-decoration: none;">+998 99 272-23-76</a></p>
+                        <p><a href="tel:+998 99 272 23 76" style="color: #667eea; text-decoration: none;">+998 99 272 23 76</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>📍 Manzil</h3>
-                        <p>Tortkul Shahar | Qozogiston kochasi 9/11</p>
+                        <p>Tortkul Shahar Qozogiston 9/11</p>
                     </div>
                     <div class="feature-card">
                         <h3>🕐 Ish Vaqti</h3>
@@ -107,17 +70,11 @@
 
                     <div style="margin-top: 2rem;">
                         <h3>Ijtimoiy Tarmoqlar</h3>
-                       <div class="social-icons">
-  <a href="https://webstudios.uz" target="_blank" class="icon instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://t.me/webstudio_builder_bot" target="_blank" class="icon telegram">
-    <i class="fab fa-telegram"></i>
-  </a>
-  <a href="https://facebook.com" target="_blank" class="icon facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-</div>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                            <a href="https://t.me/webstudio_builder_bot" target="_blank" style="font-size: 2rem; text-decoration: none;">📱</a>
+                            <a href="https://instagram.com/webstudios.uz" target="_blank" style="font-size: 2rem; text-decoration: none;">📸</a>
+                            <a href="https://facebook.com/webstudio" target="_blank" style="font-size: 2rem; text-decoration: none;">👥</a>
+                        </div>
                     </div>
                 </div>
             </div>
