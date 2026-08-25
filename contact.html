@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Web Studio bilan bog'lanish - Tashkent. +998 90 123-45-67, info@webstudio.uz">
-<title>Kontakt - Web Studio | Biz bilan Bog'lanish</title>
-    <title>Kontakt - Web Studio</title>
+    <title>Kontakt - Web Studio | Biz bilan Bog'lanish</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background Animated Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Web Studio</div>
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="logo.jpg" alt="Web Studio Logo">
+                <span>Web Studio</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Bosh sahifa</a></li>
                 <li><a href="services.html">Xizmatlar</a></li>
@@ -21,72 +29,106 @@
         </div>
     </nav>
 
-    <section class="hero" style="height: 400px;">
-        <div class="hero-content">
-            <h1>Biz bilan Bog'lanish</h1>
-            <p>Har qanday savollar uchun biz shu yerda</p>
+    <section class="hero" style="min-height: 350px; padding: 120px 0 40px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Biz bilan <span>Bog'lanish</span></h1>
+                <p>Loyihangizni muhokama qilish uchun xabar qoldiring</p>
+            </div>
         </div>
     </section>
 
-<form class="form-container" onsubmit="sendToTelegram(event)">
-    <div class="form-group">
-        <label for="name">Ism-Familya:</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-        <label for="phone">Telefon:</label>
-        <input type="tel" id="phone" name="phone" required>
-    </div>
-    <div class="form-group">
-        <label for="message">Xabar:</label>
-        <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Jo'natish</button>
-</form>
+    <section class="features" style="padding-top: 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                
+                <!-- Contact Form -->
+                <div class="animate-fade-up" style="animation-delay: 0.1s;">
+                    <form class="form-container" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ism-Familya:</label>
+                            <input type="text" id="name" name="name" placeholder="Masalan: Alisher Navoiy" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+998 90 123 45 67" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Xabar:</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Loyihangiz haqida qisqacha ma'lumot..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; border: none;">Xabarni Jo'natish <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
+                    </form>
+                </div>
+
                 <!-- Contact Info -->
-                <div>
-                    <h2>Bizning Ma'lumotlar</h2>
-                    <div class="feature-card" style="margin-top: 1rem;">
-                        <h3>📧 Email</h3>
-                        <p><a href="mailto:info@webstudios0111@gmail.com" style="color: #667eea; text-decoration: none;">info@webstudios0111@gmail.com</a></p>
+                <div class="animate-fade-up" style="animation-delay: 0.3s;">
+                    <h2 style="font-size: 2rem; margin-bottom: 2rem;">Bizning <span>Ma'lumotlar</span></h2>
+                    
+                    <div class="feature-card" style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 20px; padding: 1.5rem;">
+                        <i class="fas fa-envelope" style="font-size: 2rem; color: var(--gold);"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.2rem;">Email</h3>
+                            <a href="mailto:info@webstudios0111@gmail.com" style="color: var(--text-muted); text-decoration: none;">info@webstudios0111@gmail.com</a>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>📞 Telefon</h3>
-                        <p><a href="tel:+998 99 272 23 76" style="color: #667eea; text-decoration: none;">+998 99 272 23 76</a></p>
+                    
+                    <div class="feature-card" style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 20px; padding: 1.5rem;">
+                        <i class="fas fa-phone-alt" style="font-size: 2rem; color: var(--gold);"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.2rem;">Telefon</h3>
+                            <a href="tel:+998992722376" style="color: var(--text-muted); text-decoration: none;">+998 99 272 23 76</a>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>📍 Manzil</h3>
-                        <p>Tortkul Shahar Qozogiston 9/11</p>
+                    
+                    <div class="feature-card" style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 20px; padding: 1.5rem;">
+                        <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: var(--gold);"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.2rem;">Manzil</h3>
+                            <p style="margin: 0;">To'rtko'l shahri, Qozog'iston ko'chasi 9/11</p>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>🕐 Ish Vaqti</h3>
-                        <p>Dushanba - Juma: 09:00 - 18:00<br>Shanba: 10:00 - 16:00</p>
+                    
+                    <div class="feature-card" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 20px; padding: 1.5rem;">
+                        <i class="fas fa-clock" style="font-size: 2rem; color: var(--gold);"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.2rem;">Ish Vaqti</h3>
+                            <p style="margin: 0;">Dush - Juma: 09:00 - 18:00<br>Shanba: 10:00 - 16:00</p>
+                        </div>
                     </div>
 
-                    <div style="margin-top: 2rem;">
-                        <h3>Ijtimoiy Tarmoqlar</h3>
-                     <div class="contact-social">
-                    <a href="https://webstudios.uz" target="_blank" class="icon instagram">
-                    <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://t.me/webstudio_builder_bot" target="_blank" class="icon telegram">
-                    <i class="fab fa-telegram"></i>
-                    </a>
-                    <a href="https://facebook.com" target="_blank" class="icon facebook">
-                    <i class="fab fa-facebook"></i>
-                    </a>
-                    </div>
- 
- 
+                    <div>
+                        <h3 style="color: var(--gold); margin-bottom: 1rem;">Ijtimoiy Tarmoqlar</h3>
+                        <div class="contact-social">
+                            <a href="https://instagram.com" target="_blank" class="icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://t.me/webstudio_builder_bot" target="_blank" class="icon">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                            <a href="https://facebook.com" target="_blank" class="icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Styles just for Contact page responsiveness -->
+    <style>
+        @media (max-width: 992px) {
+            .features .container > div {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+        }
+    </style>
 
     <footer>
         <p>&copy; 2026 Web Studio. Barcha huquqlar himoyalangan.</p>

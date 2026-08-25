@@ -3,55 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Web Studios</title>
+    <title>Portfolio - Web Studio | Bizning Ishlar</title>
     <meta name="description" content="Web Studio portfolio - 500+ yakunlangan loyihalar, e-commerce, mobile apps, web platforms">
-<title>Portfolio - Web Studio | Bizning Ishlar</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .portfolio-item {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-        }
-        
-        .portfolio-img {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #000000 0%, #ffffff 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-        }
-        
-        .portfolio-content {
-            padding: 1.5rem;
-        }
-        
-        .portfolio-content h3 {
-            color: #000000;
-            margin-bottom: 0.5rem;
-        }
-    </style>
 </head>
 <body>
+    <!-- Background Animated Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Web Studios</div>
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="logo.jpg" alt="Web Studio Logo">
+                <span>Web Studio</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Bosh sahifa</a></li>
                 <li><a href="services.html">Xizmatlar</a></li>
@@ -61,76 +29,79 @@
         </div>
     </nav>
 
-    <section class="hero" style="height: 400px;">
-        <div class="hero-content">
-            <h1>Bizning Ishlarimiz</h1>
-            <p>Bizdagi loyihalarni ko'rib chiqing</p>
+    <section class="hero" style="min-height: 400px; padding: 120px 0 60px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bizning <span>Ishlarimiz</span></h1>
+                <p>Biz tomondan yaratilgan eng yaxshi loyihalar bilan tanishing</p>
+            </div>
         </div>
     </section>
 
     <section class="features">
         <div class="container">
-            <h2>Portfolio</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-img">🏪</div>
+                
+                <div class="portfolio-item animate-fade-up" style="animation-delay: 0.1s;">
+                    <div class="portfolio-img"><i class="fas fa-store" style="color: var(--gold);"></i></div>
                     <div class="portfolio-content">
                         <h3>E-Commerce Sayt</h3>
-                        <p>Onlayn do'kon - Tashrif buyuring</p>
-                        <p><small>2026</small></p>
+                        <p>Katta hajmdagi Onlayn do'kon loyihasi.</p>
+                        <small>Veb Sayt - 2026</small>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
-                    <div class="portfolio-img">📱</div>
+                <div class="portfolio-item animate-fade-up" style="animation-delay: 0.2s;">
+                    <div class="portfolio-img"><i class="fas fa-car" style="color: var(--gold);"></i></div>
                     <div class="portfolio-content">
-                        <h3>Mobile App</h3>
-                        <p>Taksi ilovasi - Flutter</p>
-                        <p><small>2026</small></p>
+                        <h3>Taxi Mobile App</h3>
+                        <p>Android va iOS uchun taksi buyurtma ilovasi.</p>
+                        <small>Mobil Ilova - 2026</small>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
-                    <div class="portfolio-img">🎥</div>
+                <div class="portfolio-item animate-fade-up" style="animation-delay: 0.3s;">
+                    <div class="portfolio-img"><i class="fas fa-video" style="color: var(--gold);"></i></div>
                     <div class="portfolio-content">
-                        <h3>Video Platform</h3>
-                        <p>YouTube kabi video sayt</p>
-                        <p><small>2026</small></p>
+                        <h3>Video Streaming</h3>
+                        <p>YouTube kabi video tomosha qilish platformasi.</p>
+                        <small>Platforma - 2026</small>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
-                    <div class="portfolio-img">🏥</div>
+                <div class="portfolio-item animate-fade-up" style="animation-delay: 0.4s;">
+                    <div class="portfolio-img"><i class="fas fa-hospital" style="color: var(--gold);"></i></div>
                     <div class="portfolio-content">
-                        <h3>Tibbiyot Portali</h3>
-                        <p>Shifoxona boshqaruv tizimi</p>
-                        <p><small>2026</small></p>
+                        <h3>Med-Portal</h3>
+                        <p>Shifoxona ichki boshqaruv CRM tizimi.</p>
+                        <small>CRM tizim - 2026</small>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
-                    <div class="portfolio-img">🎓</div>
+                <div class="portfolio-item animate-fade-up" style="animation-delay: 0.5s;">
+                    <div class="portfolio-img"><i class="fas fa-graduation-cap" style="color: var(--gold);"></i></div>
                     <div class="portfolio-content">
-                        <h3>Talim Platformasi</h3>
-                        <p>Online kurslar va darslar</p>
-                        <p><small>2026</small></p>
+                        <h3>Edu-Platform</h3>
+                        <p>Onlayn darslar va kurslar sotish platformasi.</p>
+                        <small>LMS Tizim - 2026</small>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
-                    <div class="portfolio-img">💰</div>
+                <div class="portfolio-item animate-fade-up" style="animation-delay: 0.6s;">
+                    <div class="portfolio-img"><i class="fas fa-wallet" style="color: var(--gold);"></i></div>
                     <div class="portfolio-content">
                         <h3>Banking App</h3>
-                        <p>Mobil bank ilovasi</p>
-                        <p><small>2026</small></p>
+                        <p>Xavfsiz mobil bank va pul o'tkazmalari ilovasi.</p>
+                        <small>Fintech - 2026</small>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Web Studios. Barcha huquqlar himoyalangan.</p>
+        <p>&copy; 2026 Web Studio. Barcha huquqlar himoyalangan.</p>
     </footer>
 
     <script src="script.js"></script>

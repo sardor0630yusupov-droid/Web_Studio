@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Web Studio xizmatları: web design, e-commerce, SEO, mobile app, AI integration">
-<title>Xizmatlar - Web Studio | Veb-sayt Development</title>
-    <title>Xizmatlar - Web Studio</title>
+    <meta name="description" content="Web Studio xizmatlari: web design, e-commerce, SEO, mobile app, AI integration">
+    <title>Xizmatlar - Web Studio | Veb-sayt Development</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Web Studio</div>
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="logo.jpg" alt="Web Studio Logo" onerror="this.src='https://via.placeholder.com/50/D4AF37/000000?text=WS'">
+                <span>Web Studio</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Bosh sahifa</a></li>
                 <li><a href="services.html">Xizmatlar</a></li>
@@ -21,63 +28,122 @@
         </div>
     </nav>
 
-    <section class="hero" style="height: 400px;">
-        <div class="hero-content">
-            <h1>Bizning Xizmatlar</h1>
-            <p>Sifatli va professional veb-saytlar</p>
+    <section class="hero" style="min-height: 400px; padding: 120px 0 60px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bizning <span>Xizmatlar</span></h1>
+                <p>Biznesingizni raqamlashtirish uchun kompleks IT yechimlar</p>
+            </div>
         </div>
     </section>
 
+    <!-- DETAILED SERVICES -->
     <section class="features">
         <div class="container">
-            <h2>Qanday xizmatlar taklif qilamiz?</h2>
+            <h2 class="section-title">Biz <span>nima qilamiz?</span></h2>
             <div class="features-grid">
-                <div class="feature-card">
-                    <h3>🌐 Veb-sayt Dizayni</h3>
-                    <p>Modern va responsive dizayn. Barcha qurilmalarda yaxshi ko'rinadi.</p>
+                <div class="feature-card animate-fade-up">
+                    <h3><i class="fas fa-globe" style="font-size: 2rem; margin-bottom: 10px; display: block; color: var(--gold);"></i> Web Development</h3>
+                    <p>Har qanday murakkablikdagi veb-saytlar, landing page va yirik portallarni yaratish. Next.js va React.js kabi eng so'nggi texnologiyalar asosida yuqori tezlik va barqarorlikni kafolatlaymiz.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>⚙️ Backend Development</h3>
-                    <p>Node.js, Python, PHP - ishonchli server tarafining yechimi.</p>
+                <div class="feature-card animate-fade-up">
+                    <h3><i class="fas fa-mobile-alt" style="font-size: 2rem; margin-bottom: 10px; display: block; color: var(--gold);"></i> Mobile App</h3>
+                    <p>Android va iOS uchun sifatli mobil ilovalar. Flutter va React Native orqali biznesingizni smartfonlarga olib kiramiz, foydalanuvchilar qulayligini maksimal darajaga chiqaramiz.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>📱 Mobile App</h3>
-                    <p>iOS va Android uchun native aplikatsiyalar.</p>
+                <div class="feature-card animate-fade-up">
+                    <h3><i class="fas fa-search-dollar" style="font-size: 2rem; margin-bottom: 10px; display: block; color: var(--gold);"></i> SEO & Marketing</h3>
+                    <p>Saytingizni Google'da birinchi sahifalarga olib chiqish uchun to'liq SEO tahlili va optimizatsiya. Mijozlar oqimini ko'paytirish uchun to'g'ri marketing strategiyasini tuzamiz.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>🔍 SEO Optimization</h3>
-                    <p>Google'da birinchi sahifada chiqish uchun optimizasiya.</p>
+                <div class="feature-card animate-fade-up">
+                    <h3><i class="fas fa-shopping-cart" style="font-size: 2rem; margin-bottom: 10px; display: block; color: var(--gold);"></i> E-Commerce Yechimlar</h3>
+                    <p>Onlayn do'konlar, to'lov tizimlarini ulash (Payme, Click, Uzcard) va tovarlarni boshqarish panellari. Avtomatlashtirilgan savdo tizimini ishga tushirib beramiz.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>🛒 E-Commerce</h3>
-                    <p>Onlayn do'kon yaratish va boshqarish.</p>
+                <div class="feature-card animate-fade-up">
+                    <h3><i class="fas fa-paint-brush" style="font-size: 2rem; margin-bottom: 10px; display: block; color: var(--gold);"></i> UI/UX Dizayn</h3>
+                    <p>Foydalanuvchilarning his-tuyg'ulariga ijobiy ta'sir qiluvchi qulay va zamonaviy interfeyslar yaratamiz. Figma orqali prototiplar va to'liq dizayn tizimini chizamiz.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>🤖 AI Integration</h3>
-                    <p>Chatbot, avtomatsiya va AI asoslangan yechimlar.</p>
+                <div class="feature-card animate-fade-up">
+                    <h3><i class="fas fa-robot" style="font-size: 2rem; margin-bottom: 10px; display: block; color: var(--gold);"></i> AI va Avtomatizatsiya</h3>
+                    <p>Biznesingiz jarayonlarini osonlashtirish uchun Telegram botlar, AI-chatbotlar va maxsus avtomatlashtirilgan dasturlar ishlab chiqamiz.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding: 4rem 0; background: #f8f9fa;">
+    <!-- FAQ SECTION -->
+    <section class="features" style="background: rgba(0,0,0,0.3); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title">Ko'p beriladigan <span>savollar</span></h2>
+            
+            <div class="faq-container animate-fade-up">
+                <div class="faq-item">
+                    <div class="faq-question">Veb-sayt qancha vaqtda tayyor bo'ladi? <i class="fas fa-chevron-down faq-icon"></i></div>
+                    <div class="faq-answer">
+                        <p>Loyiha hajmiga qarab vaqt o'zgaradi. Oddiy landing pagelar 5-7 kun ichida, murakkab elektron tijorat yoki korporativ saytlar esa 2 haftadan 1 oygacha vaqt olishi mumkin.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Sayt uchun domen va xosting bepulmi? <i class="fas fa-chevron-down faq-icon"></i></div>
+                    <div class="faq-answer">
+                        <p>Sayt yaratish narxi ichida domen va xosting sozlash xizmatlari bepul. Lekin domen (sayt nomi) va xosting sotib olish uchun kompaniyalarga yillik to'lov o'zingiz tomondan qilinadi (odatda ancha arzon turadi).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Loyiha topshirilgandan keyin texnik yordam bormi? <i class="fas fa-chevron-down faq-icon"></i></div>
+                    <div class="faq-answer">
+                        <p>Albatta! Tarifga qarab 1 oydan 6 oygacha bepul texnik xizmat ko'rsatamiz. Agar uzoq muddatli yordam kerak bo'lsa, maxsus texnik xizmat shartnomasi ham tuzishimiz mumkin.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">SEO optimizatsiya qilib berasizlarmi? <i class="fas fa-chevron-down faq-icon"></i></div>
+                    <div class="faq-answer">
+                        <p>Ha, barcha yaratgan saytlarimizda bazaviy SEO sozlamalari (meta teglar, tezlik, sitemap) qilib beriladi. Chuqur SEO uchun alohida xizmatimizdan foydalanishingiz mumkin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="features">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Narxlar</h2>
+            <h2 class="section-title">Loyihalar <span>Narxi</span></h2>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card animate-fade-up" style="text-align: center;">
                     <h3>📦 Boshlang'ich</h3>
-                    <p><strong>5,000,000 so'm</strong></p>
-                    <p>Oddiy veb-sayt, 5 sahifa</p>
+                    <p style="font-size: 2rem; color: var(--text-main); font-weight: 700; margin: 15px 0;">5,000,000 <span style="font-size: 1rem; color: var(--gold);">so'm</span></p>
+                    <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 15px 0;">
+                    <p style="margin-bottom: 10px;">Landing Page / Vizitka</p>
+                    <p style="margin-bottom: 10px;">Maxsus Noyob Dizayn</p>
+                    <p style="margin-bottom: 10px;">Asosiy SEO Optimizatsiya</p>
+                    <p style="margin-bottom: 20px;">1 oy bepul texnik yordam</p>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%;">Bog'lanish</a>
                 </div>
-                <div class="feature-card">
-                    <h3>⭐ O'rta</h3>
-                    <p><strong>15,000,000 so'm</strong></p>
-                    <p>E-Commerce, 20 sahifa</p>
+                
+                <div class="feature-card animate-fade-up" style="text-align: center; border-color: var(--gold); transform: scale(1.05); z-index: 1;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #000; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8rem;">ENG MASHHUR</div>
+                    <h3>⭐ Biznes E-Commerce</h3>
+                    <p style="font-size: 2rem; color: var(--text-main); font-weight: 700; margin: 15px 0;">15,000,000 <span style="font-size: 1rem; color: var(--gold);">so'm</span></p>
+                    <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 15px 0;">
+                    <p style="margin-bottom: 10px;">Onlayn do'kon yaratish</p>
+                    <p style="margin-bottom: 10px;">To'lov tizimlari (Payme/Click)</p>
+                    <p style="margin-bottom: 10px;">Qulay Admin Boshqaruv Panel</p>
+                    <p style="margin-bottom: 20px;">3 oy bepul texnik yordam</p>
+                    <a href="contact.html" class="btn" style="width: 100%;">Bog'lanish</a>
                 </div>
-                <div class="feature-card">
-                    <h3>🚀 Premium</h3>
-                    <p><strong>50,000,000+ so'm</strong></p>
-                    <p>Mobile app + Backend</p>
+                
+                <div class="feature-card animate-fade-up" style="text-align: center;">
+                    <h3>🚀 Premium Pro</h3>
+                    <p style="font-size: 2rem; color: var(--text-main); font-weight: 700; margin: 15px 0;">30,000,000+ <span style="font-size: 1rem; color: var(--gold);">so'm</span></p>
+                    <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 15px 0;">
+                    <p style="margin-bottom: 10px;">Mobil Ilova + Web Platforma</p>
+                    <p style="margin-bottom: 10px;">Murakkab Backend API Tizimi</p>
+                    <p style="margin-bottom: 10px;">3-tomon integratsiyalari</p>
+                    <p style="margin-bottom: 20px;">6 oy bepul texnik yordam</p>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%;">Bog'lanish</a>
                 </div>
             </div>
         </div>
