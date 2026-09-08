@@ -1,20 +1,9 @@
-# Web Studio - Professional Web Design & Development
+# WebStudio Premium
 
-🌐 **Web Studios** - Tortkul shahrida eng sifatli veb-saytlar va ilovalar ishlab chiquvchi kompaniya.
+Dark / neon-blue portfolio website for WebStudio.
 
-## 📋 Loyiha Haqida
+## Run
+Open `index.html` locally, or deploy the `webstudio` folder to Netlify/Vercel.
 
-Bu loyiha Web Studio kompaniyasining rasmiy veb-saytdir. Bunda:
-- Kompaniya haqida ma'lumot
-- Taqdim etilayotgan xizmatlar
-- Yakunlangan loyihalar (Portfolio)
-- Kontakt ma'lumotlar
-
-## 🚀 Texnologiyalar
-
-- **HTML5** - Mazmun tuzilishi
-- **CSS3** - Shakl va dizayn
-- **JavaScript** - Dinamik funksiyalar
-- **Responsive Design** - Barcha qurilmalarda yaxshi ko'rinish
-
-## 📁 Fayllar Tuzilishi
+## Important
+The portfolio uses the exact supplied project identities. ClassMaster has no logo supplied in the source files, so it is intentionally represented as a clean branded text card instead of using the ACM logo.
