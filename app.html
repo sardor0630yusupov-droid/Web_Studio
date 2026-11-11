@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#052624">
+<meta name="color-scheme" content="dark">
+<title>Domen.uz — Domen qidirish</title>
+<link rel="icon" href="icon-512.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+:root{--ink:#052624;--deep:#0B3D38;--teal:#1FB5A0;--mint:#8CF0DC;--chalk:#EEF8F6;--coral:#FF6F5E;--amber:#FFC24D;--line:rgba(140,240,220,.16)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{min-height:100%;background:var(--ink);color:var(--chalk);font:400 15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input{font:inherit;color:inherit}button{cursor:pointer;border:0}
+.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(70% 45% at 50% 20%,#0F5A52 0%,transparent 70%),var(--ink);overflow:hidden}
+.bg i{position:absolute;left:50%;top:20%;width:260px;height:260px;margin:-130px;border:1px solid var(--mint);border-radius:50%;opacity:0;animation:ring 7s infinite linear}
+.bg i:nth-child(2){animation-delay:2.3s}.bg i:nth-child(3){animation-delay:4.6s}
+@keyframes ring{0%{transform:scale(.3);opacity:.3}100%{transform:scale(3.4);opacity:0}}
+.wrap{max-width:640px;margin:0 auto;padding:max(18px,env(safe-area-inset-top)) 18px max(28px,env(safe-area-inset-bottom))}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.02em}
+.lg{display:inline-flex}.lg.scan{animation:pulse .7s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.logo .h{fill:var(--teal)}.logo .a{fill:none;stroke:var(--mint);stroke-width:4;stroke-linecap:round}.logo .d{fill:var(--mint)}
+.pill{padding:7px 12px;border-radius:99px;background:rgba(31,181,160,.16);border:1px solid var(--line);color:var(--mint);font-size:12px;font-weight:600;text-decoration:none}
+.tabs{display:flex;gap:6px;padding:4px;border-radius:14px;background:rgba(11,61,56,.75);border:1px solid var(--line);margin-bottom:20px}
+.tabs button{flex:1;padding:9px 6px;border-radius:10px;background:none;color:rgba(238,248,246,.8);font-size:13px;font-weight:600}
+.tabs .on{background:var(--mint);color:#032421}
+h1{font-size:26px;line-height:1.15;letter-spacing:-.02em}
+.sub{color:rgba(238,248,246,.72);margin:8px 0 18px}
+.field{display:flex;align-items:center;gap:8px;background:rgba(5,38,36,.85);border:1px solid var(--line);border-radius:16px;padding:0 8px 0 14px}
+.field:focus-within{border-color:var(--mint);box-shadow:0 0 0 4px rgba(140,240,220,.12)}
+.field input{flex:1;min-width:0;background:none;border:0;outline:0;padding:16px 0;font-size:17px}
+.field b{color:var(--mint)}
+.clr{width:34px;height:34px;border-radius:50%;background:rgba(140,240,220,.14);color:var(--mint);font-size:16px;flex:none}
+.go{padding:10px 14px;border-radius:12px;background:var(--teal);color:#032421;font-weight:700;flex:none}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 0 4px;scrollbar-width:none}
+.chip{flex:none;padding:7px 13px;border-radius:99px;background:none;border:1px solid var(--line);color:rgba(238,248,246,.75)}
+.chip.on{background:var(--mint);color:#032421;border-color:var(--mint);font-weight:600}
+#bar{height:3px;margin:10px 0;border-radius:3px;background:linear-gradient(90deg,transparent,var(--mint),transparent) -50% 0/40% 100% no-repeat;opacity:0;animation:sweep 1s infinite linear}
+#bar.on{opacity:1}@keyframes sweep{to{background-position:150% 0}}
+.row{display:flex;align-items:center;gap:10px;padding:13px 14px;margin-top:10px;border-radius:18px;background:rgba(11,61,56,.65);border:1px solid var(--line);opacity:0;transform:translateX(-16px);animation:rise .45s calc(var(--i,0)*.07s) cubic-bezier(.2,.9,.3,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.row.free{border-color:rgba(31,181,160,.55)}.row.taken{opacity:.6}.row.unk{border-color:rgba(255,194,77,.45)}
+.row .n{flex:1;min-width:0;font-weight:600;word-break:break-all}
+.row small{display:block;font-weight:400;color:rgba(238,248,246,.65);word-break:normal}
+.heart{width:36px;height:36px;border-radius:50%;background:none;color:rgba(238,248,246,.35);font-size:19px;flex:none}
+.heart.on{color:var(--coral)}
+.buy{padding:9px 13px;border-radius:12px;background:var(--teal);color:#032421;font-weight:600;flex:none}
+.sug{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.sug span{width:100%;font-size:12px;color:rgba(238,248,246,.6)}
+.fine,.note{font-size:12px;color:rgba(238,248,246,.55);margin-top:14px}
+.empty{margin-top:34px;text-align:center;color:rgba(238,248,246,.55)}
+.hide{display:none!important}
+#sheet{position:fixed;inset:0;z-index:15;display:none;align-items:flex-end;justify-content:center;background:rgba(2,16,15,.7)}
+#sheet.on{display:flex}
+#sheet .card{width:100%;max-width:520px;max-height:92%;overflow:auto;background:var(--deep);border-radius:26px 26px 0 0;padding:20px 18px max(20px,env(safe-area-inset-bottom));animation:up .35s cubic-bezier(.2,.9,.3,1)}
+@keyframes up{from{transform:translateY(100%)}}
+.dom{font-size:22px;font-weight:700;word-break:break-all;margin-bottom:14px}
+.seg{display:flex;gap:8px;margin-bottom:12px}.seg button{flex:1;padding:10px;border-radius:12px;background:none;border:1px solid var(--line)}
+.seg .on{background:var(--mint);color:#032421;font-weight:700}
+.tot{display:flex;justify-content:space-between;margin:12px 0 14px;font-weight:600}
+.btn{width:100%;padding:14px;border-radius:14px;background:var(--teal);color:#032421;font-weight:700;margin-top:12px}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--chalk);margin-top:8px}
+.err{color:var(--coral);min-height:20px;margin-top:8px;font-size:14px}
+#toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:30;background:var(--chalk);color:var(--ink);padding:10px 16px;border-radius:12px;font-weight:600;opacity:0;transition:.3s;pointer-events:none;max-width:90%;text-align:center}
+#toast.on{opacity:1}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important}.bg i{display:none}}
+#intro{position:fixed;inset:0;z-index:40;background:var(--ink);display:flex;align-items:center;justify-content:center;transition:opacity .5s}
+#intro.out{opacity:0;pointer-events:none}
+#ic{position:absolute;inset:0;width:100%;height:100%;transition:opacity .5s}
+#slides{position:relative;width:100%;max-width:420px;padding:0 24px max(24px,env(safe-area-inset-bottom));text-align:center;overflow:hidden}
+#sl{display:flex;transition:transform .4s cubic-bezier(.2,.9,.3,1)}
+.sd{min-width:100%;padding:0 6px}.sd .em{font-size:64px;margin-bottom:14px}.sd h2{font-size:24px;letter-spacing:-.02em}.sd p{color:rgba(238,248,246,.72);margin-top:8px}
+.dots{display:flex;justify-content:center;gap:8px;margin:22px 0 18px}.dots i{width:8px;height:8px;border-radius:99px;background:rgba(140,240,220,.25);transition:.3s}.dots i.on{width:24px;background:var(--mint)}
+.skip{background:none;color:rgba(238,248,246,.6);margin-top:10px;padding:8px}
+</style>
+</head>
+<body>
+<div class="bg"><i></i><i></i><i></i></div>
+<main class="wrap">
+  <header class="top">
+    <div class="brand"><span class="lg" id="hlogo"></span>Domen.uz</div>
+    <a class="pill" id="chan" href="https://t.me/Yusupov_Dev1">📢 Kanalga obuna</a>
+  </header>
+  <nav class="tabs">
+    <button class="on" data-t="s" type="button">🔍 Qidirish</button>
+    <button data-t="f" type="button">♥ Saqlangan</button>
+    <button data-t="o" type="button">🧾 Buyurtmalar</button>
+  </nav>
+
+  <section id="s">
+    <h1>Domeningizni toping</h1>
+    <p class="sub">Nomni yozing — band yoki boʻshligini DNS orqali real tekshiramiz.</p>
+    <div class="field">
+      <input id="q" type="text" placeholder="masalan, mening-biznesim" autocomplete="off" enterkeyhint="search">
+      <button class="clr hide" id="clr" type="button" aria-label="Tozalash">✕</button>
+      <button class="go" id="go" type="button">Qidirish</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div id="bar"></div>
+    <div id="res"><div class="empty">Natijalar shu yerda chiqadi</div></div>
+    <div class="sug hide" id="sug"></div>
+  </section>
+
+  <section id="f" class="hide"><div id="fav"></div></section>
+  <section id="o" class="hide"><div id="ord"></div></section>
+</main>
+<div id="sheet"></div>
+<div id="toast" role="status"></div>
+<div id="intro"><canvas id="ic"></canvas>
+  <div id="slides" class="hide"><div id="sl"></div><div class="dots" id="dots"></div>
+    <button class="btn" id="nx" type="button">Keyingi</button><button class="skip" id="sk" type="button">Oʻtkazib yuborish</button></div></div>
+
+
+<script>
+const CFG={CHANNEL:"Yusupov_Dev1",ADMIN:"Ilovachii",ZONES:{".uz":150000,".com":180000,".net":200000,".org":190000,".io":520000}};
+const $=s=>document.querySelector(s);
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const som=n=>n.toLocaleString("ru-RU")+" soʻm";
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const openLink=u=>{location.href=u};
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),2600)}
+addEventListener("offline",()=>toast("Internet yoʻq"));
+
+/* Logo */
+const ARCS=["M65.1 35.1A7 7 0 0 1 74.9 35.1","M60.1 30.1A14 14 0 0 1 79.9 30.1","M55.2 25.2A21 21 0 0 1 84.8 25.2"];
+$("#hlogo").innerHTML=`<svg class="logo" width="34" viewBox="0 0 100 100" aria-label="Domen.uz"><path class="h" fill-rule="evenodd" d="M10 58L36 38L62 58V86Q62 92 56 92H16Q10 92 10 86ZM28 92V72A8 8 0 0 1 44 72V92Z"/><circle class="d" cx="70" cy="40" r="3"/>${ARCS.map(d=>`<path class="a" d="${d}"/>`).join("")}</svg>`;
+
+/* Yorliqlar (tab) */
+function tab(t){
+  document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===t));
+  ["s","f","o"].forEach(id=>$("#"+id).classList.toggle("hide",id!==t));
+  if(t==="f")rfav();if(t==="o")rord();
+}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>tab(b.dataset.t));
+
+/* Nomni tozalash */
+const CY="а:a,б:b,в:v,г:g,д:d,е:e,ё:yo,ж:j,з:z,и:i,й:y,к:k,л:l,м:m,н:n,о:o,п:p,р:r,с:s,т:t,у:u,ф:f,х:x,ц:s,ч:ch,ш:sh,щ:sh,ъ:,ы:i,ь:,э:e,ю:yu,я:ya,ў:o,қ:q,ғ:g,ҳ:h".split(",").reduce((o,p)=>(o[p[0]]=p.slice(2),o),{});
+const clean=v=>v.toLowerCase().trim().split(".")[0].replace(/[а-яёўқғҳ]/g,c=>CY[c]).replace(/[^a-z0-9-]/g,"").replace(/^-+|-+$/g,"");
+
+/* Maydon: oʻchirish tugmasi har doim ishlaydi */
+const q=$("#q"),clr=$("#clr");
+const tog=()=>clr.classList.toggle("hide",!q.value);
+q.addEventListener("input",tog);
+q.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();search()}});
+clr.onclick=()=>{q.value="";tog();q.focus()};
+$("#go").onclick=()=>search();
+
+/* Zonalar */
+const sel=new Set(Object.keys(CFG.ZONES));
+$("#chips").innerHTML=Object.keys(CFG.ZONES).map(z=>`<button class="chip on" data-z="${z}" type="button">${z}</button>`).join("");
+$("#chips").onclick=e=>{const z=e.target.dataset.z;if(!z)return;sel.has(z)?sel.delete(z):sel.add(z);e.target.classList.toggle("on")};
+
+/* Haqiqiy tekshiruv: DNS-over-HTTPS (+ RDAP muddat) */
+async function jf(url,opt,ms){const ac=new AbortController(),t=setTimeout(()=>ac.abort(),ms||5000);try{return await fetch(url,{...opt,signal:ac.signal})}finally{clearTimeout(t)}}
+async function dns(d){
+  const urls=[`https://cloudflare-dns.com/dns-query?name=${d}&type=NS`,`https://dns.google/resolve?name=${d}&type=NS`];
+  for(const u of urls){
+    try{const j=await(await jf(u,{headers:{accept:"application/dns-json"}})).json();
+      if(j.Status===3)return"free";
+      if(j.Status===0)return"taken";
+    }catch(e){}
+  }
+  return"unknown";
+}
+async function rdap(d){
+  try{const r=await jf("https://rdap.org/domain/"+d,{},4000);if(!r.ok)return null;
+    const ev=((await r.json()).events||[]).find(x=>x.eventAction==="expiration");
+    return ev?ev.eventDate.slice(0,10):null}catch(e){return null}
+}
+
+/* Saqlanganlar */
+const favs=()=>store.get("fav",[]);
+function toggleFav(d){const f=favs(),on=!f.includes(d);store.set("fav",on?[d,...f]:f.filter(x=>x!==d));return on}
+
+let busy=false;
+async function search(v){
+  if(busy)return;
+  if(v){q.value=v;tog()}
+  const name=clean(q.value);
+  if(name.length<2)return toast("Kamida 2 ta harf yozing");
+  if(!sel.size)return toast("Kamida bitta zona tanlang");
+  busy=true;$("#bar").classList.add("on");$("#hlogo").classList.add("scan");
+  const list=await Promise.all([...sel].map(async z=>({zone:z,price:CFG.ZONES[z],st:await dns(name+z)})));
+  busy=false;$("#bar").classList.remove("on");$("#hlogo").classList.remove("scan");
+  const rank=r=>r.st==="taken"?2:r.st==="unknown"?1:0;
+  list.sort((a,b)=>rank(a)-rank(b)||a.price-b.price);
+  const fv=favs();
+  $("#res").dataset.name=name;
+  $("#res").innerHTML=list.map((r,i)=>{
+    const full=name+r.zone,tk=r.st==="taken",un=r.st==="unknown";
+    return `<div class="row ${tk?"taken":un?"unk":"free"}" style="--i:${i}"><div class="n">${esc(full)}<small id="x${i}">${tk?"Band — boshqa egasi bor":un?"Tarmoq xatosi — menejer tasdiqlaydi":som(r.price)+" / yil · DNSʼda topilmadi"}</small></div><button class="heart ${fv.includes(full)?"on":""}" data-d="${esc(full)}" type="button" aria-label="Saqlash">♥</button>${tk?"":`<button class="buy" data-z="${r.zone}" data-p="${r.price}" type="button">Buyurtma</button>`}</div>`}).join("")
+    +'<p class="fine">Natijalar DNS maʼlumotiga asoslanadi. Yakuniy tasdiqni menejer beradi.</p>';
+  list.forEach((r,i)=>{if(r.st==="taken")rdap(name+r.zone).then(d=>{const e=$("#x"+i);if(d&&e)e.textContent="Band · amal qilish muddati: "+d})});
+  const alt=[["my",1],["get",1],["the",1],["uz",0],["online",0],["pro",0]].map(([w,pre])=>pre?w+name:name+w);
+  $("#sug").innerHTML='<span>Boshqa variantlar:</span>'+alt.map(a=>`<button class="chip" data-s="${a}" type="button">${a}</button>`).join("");
+  $("#sug").classList.remove("hide");
+  if(list.some(r=>r.st==="free")&&navigator.vibrate)navigator.vibrate(30);
+}
+$("#sug").onclick=e=>{const s=e.target.dataset.s;if(s)search(s)};
+$("#res").onclick=e=>{
+  const h=e.target.closest(".heart");
+  if(h){const on=toggleFav(h.dataset.d);h.classList.toggle("on",on);toast(on?"Saqlandi ♥":"Olib tashlandi");return}
+  const b=e.target.closest(".buy");if(b)order($("#res").dataset.name,b.dataset.z,+b.dataset.p);
+};
+
+function rfav(){
+  const f=favs();
+  $("#fav").innerHTML=f.length?f.map(d=>`<div class="row free"><div class="n">${esc(d)}</div><button class="buy" data-chk="${esc(d)}" type="button">Tekshirish</button><button class="heart on" data-d="${esc(d)}" type="button">♥</button></div>`).join(""):'<div class="empty">Hozircha saqlangan domen yoʻq.<br>Natijadagi ♥ tugmasini bosing.</div>';
+}
+$("#fav").onclick=e=>{
+  const h=e.target.closest(".heart"),c=e.target.closest("[data-chk]");
+  if(h){toggleFav(h.dataset.d);rfav()}
+  if(c){tab("s");search(c.dataset.chk.split(".")[0])}
+};
+
+function rord(){
+  const o=store.get("ord",[]);
+  $("#ord").innerHTML=o.length?o.map(x=>`<div class="row free"><div class="n">${esc(x.d)}<small>${esc(x.id)} · ${x.y} yil · ${som(x.t)}<br>${esc(x.at)} · menejerga yuborildi</small></div></div>`).join(""):'<div class="empty">Hozircha buyurtmalar yoʻq</div>';
+}
+
+/* Buyurtma: menejerga Telegram orqali yuboriladi (soxta SMS yoʻq) */
+function order(name,zone,price){
+  let y=1;const full=name+zone,sh=$("#sheet");
+  sh.innerHTML=`<div class="card"><div class="dom">${esc(full)}</div>
+  <div class="seg" id="yrs">${[1,2,3].map(n=>`<button data-y="${n}" class="${n===1?"on":""}" type="button">${n} yil</button>`).join("")}</div>
+  <div class="tot"><span>Jami:</span><b id="tot">${som(price)}</b></div>
+  <div class="field"><input id="nm" type="text" placeholder="Ismingiz" autocomplete="name"></div>
+  <div class="field" style="margin-top:10px"><b>+998</b><input id="ph" type="tel" inputmode="numeric" placeholder="90 123 45 67" autocomplete="tel-national"></div>
+  <p class="note">Buyurtma menejerga Telegram orqali yuboriladi. Toʻlov va rasmiylashtirish shu yerda tasdiqlanadi.</p>
+  <div class="err" id="oe" role="alert"></div>
+  <button class="btn" id="send" type="button">Telegram orqali yuborish</button>
+  <button class="btn ghost" id="x" type="button">Bekor qilish</button></div>`;
+  sh.classList.add("on");
+  const close=()=>sh.classList.remove("on");
+  sh.onclick=e=>{if(e.target===sh)close()};$("#x").onclick=close;
+  $("#ph").addEventListener("input",e=>{const d=e.target.value.replace(/\D/g,"").replace(/^998(?=\d{9})/,"").slice(0,9);e.target.value=[d.slice(0,2),d.slice(2,5),d.slice(5,7),d.slice(7,9)].filter(Boolean).join(" ")});
+  $("#yrs").onclick=e=>{const n=+e.target.dataset.y;if(!n)return;y=n;document.querySelectorAll("#yrs button").forEach(b=>b.classList.toggle("on",b===e.target));$("#tot").textContent=som(price*y)};
+  $("#send").onclick=()=>{
+    const nm=$("#nm").value.trim(),ph=$("#ph").value.replace(/\D/g,""),er=$("#oe");
+    if(nm.length<2){er.textContent="Ismingizni yozing";return}
+    if(ph.length!==9){er.textContent="Telefon raqamni 9 xonali kiriting (90 123 45 67)";return}
+    const id="D-"+Date.now().toString(36).slice(-5).toUpperCase(),t=price*y;
+    store.set("ord",[{id,d:full,y,t,at:new Date().toLocaleDateString("ru-RU")},...store.get("ord",[])].slice(0,50));
+    const msg=`Salom! ${full} domenini ${y} yilga buyurtma qilmoqchiman (${som(t)}).\nIsm: ${nm}\nTelefon: +998${ph}\nBuyurtma: ${id}`;
+    close();toast("Telegram ochilmoqda...");
+    openLink(`https://t.me/${CFG.ADMIN}?text=${encodeURIComponent(msg)}`);
+  };
+}
+/* Kirish: zarralar logotipga yigʻiladi, birinchi kirishda slaydlar */
+(function(){
+  const intro=$("#intro"),ic=$("#ic"),g=ic.getContext("2d"),sl=$("#slides");
+  const SL=[["🔎","Domenni bir zumda tekshiring",".uz, .com, .net, .org va .io — DNS orqali real natija."],["♥","Yoqqanini saqlang","Variantlarni solishtiring va ♥ bilan saqlab qoʻying."],["💬","Buyurtma bir tugmada","Menejerga Telegram orqali yuboriladi."]];
+  $("#sl").innerHTML=SL.map(s=>`<div class="sd"><div class="em">${s[0]}</div><h2>${s[1]}</h2><p>${s[2]}</p></div>`).join("");
+  $("#dots").innerHTML=SL.map(()=>"<i></i>").join("");
+  let i=0,fin=false,went=false;
+  function go(n){i=Math.max(0,Math.min(SL.length-1,n));$("#sl").style.transform=`translateX(${-i*100}%)`;[...$("#dots").children].forEach((d,k)=>d.classList.toggle("on",k===i));$("#nx").textContent=i===SL.length-1?"Boshlash":"Keyingi"}
+  function finish(){if(fin)return;fin=true;store.set("seen",1);intro.classList.add("out");setTimeout(()=>intro.remove(),600)}
+  function after(){if(went)return;went=true;if(store.get("seen",0))finish();else{ic.style.opacity=0;sl.classList.remove("hide");go(0)}}
+  $("#nx").onclick=()=>i===SL.length-1?finish():go(i+1);
+  $("#sk").onclick=finish;
+  let sx=0;
+  $("#sl").addEventListener("touchstart",e=>{sx=e.touches[0].clientX},{passive:true});
+  $("#sl").addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>40)go(i+(d<0?1:-1))});
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){after();return}
+  intro.addEventListener("click",()=>{if(sl.classList.contains("hide"))after()});
+  const dpr=Math.min(devicePixelRatio||1,2),W=innerWidth,H=innerHeight;
+  ic.width=W*dpr;ic.height=H*dpr;g.scale(dpr,dpr);
+  const s=Math.min(W,H*.75,440),L=s*.5,o=document.createElement("canvas");o.width=W;o.height=H;
+  const c=o.getContext("2d",{willReadFrequently:true});
+  c.save();c.translate((W-L)/2,H*.36-L/2);c.scale(L/100,L/100);
+  c.fillStyle="#1FB5A0";c.fill(new Path2D("M10 58L36 38L62 58V86Q62 92 56 92H16Q10 92 10 86ZM28 92V72A8 8 0 0 1 44 72V92Z"),"evenodd");
+  c.strokeStyle=c.fillStyle="#8CF0DC";c.lineWidth=4;c.lineCap="round";
+  ARCS.forEach(d=>c.stroke(new Path2D(d)));c.beginPath();c.arc(70,40,3,0,7);c.fill();c.restore();
+  c.fillStyle="#8CF0DC";c.textAlign="center";c.font=`700 ${Math.round(s*.12)}px system-ui,sans-serif`;c.fillText("Domen.uz",W/2,H*.36+L/2+s*.16);
+  const d=c.getImageData(0,0,W,H).data,step=Math.max(2,Math.round(s/110)),T=[];
+  for(let y=0;y<H;y+=step)for(let x=0;x<W;x+=step){const k=(y*W+x)*4;if(d[k+3]>140)T.push([x,y,d[k],d[k+1],d[k+2]])}
+  T.sort(()=>Math.random()-.5);
+  const P=T.slice(0,1200).map(t=>{const a=Math.random()*6.283,r=Math.max(W,H)*(.55+Math.random()*.4);return{tx:t[0],ty:t[1],x0:W/2+Math.cos(a)*r,y0:H/2+Math.sin(a)*r,dl:Math.random()*.7,col:`rgb(${t[2]},${t[3]},${t[4]})`,z:1.5+Math.random()*1.4}});
+  const T0=performance.now();
+  (function frame(now){
+    if(fin||went)return;
+    const t=(now-T0)/1000;g.clearRect(0,0,W,H);
+    for(const p of P){const u=Math.min(1,Math.max(0,(t-p.dl)/1.5)),e=1-Math.pow(1-u,3);g.fillStyle=p.col;g.fillRect(p.x0+(p.tx-p.x0)*e,p.y0+(p.ty-p.y0)*e,p.z,p.z)}
+    if(t<2.9)requestAnimationFrame(frame);else after();
+  })(T0);
+})();
+</script>
+</body>
+</html>
