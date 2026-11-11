@@ -1,14 +1,9 @@
-# WebStudio Premium Portfolio
+# WebStudio Premium
 
-Static HTML/CSS/JS landing page for WebStudio.
+Dark / neon-blue portfolio website for WebStudio.
 
 ## Run
-Open `index.html` directly or deploy the whole folder to Netlify/Vercel.
+Open `index.html` locally, or deploy the `webstudio` folder to Netlify/Vercel.
 
-## Assets
-Place the provided logo/project images and `stain-of-age.mp3` in `assets/` as included.
-
-## Customize
-- Edit portfolio links/text in `index.html`.
-- Edit colors and layout in `style.css`.
-- Edit interactions/music in `script.js`.
+## Important
+The portfolio uses the exact supplied project identities. ClassMaster has no logo supplied in the source files, so it is intentionally represented as a clean branded text card instead of using the ACM logo.
